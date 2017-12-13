@@ -14,4 +14,4 @@ for ($rida = 1; $rida <= 5; $rida++){
     }
     echo '<font color="'.$varv.'">Värviline tekst</font><br />';
 }
-
+sss

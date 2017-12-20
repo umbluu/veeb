@@ -20,3 +20,19 @@ echo '<hr />';
 foreach ($numbers as $number){
     echo '<i>'.$number.'</i><br />';
 }
+
+//
+
+$numbers[] = 6;
+echo '<hr />';
+foreach ($numbers as $number){
+    echo '<i>'.$number.'</i><br />';
+}
+
+//
+
+$numbers[0] = 7;
+echo '<hr />';
+foreach ($numbers as $number){
+    echo '<i>'.$number.'</i><br />';
+}

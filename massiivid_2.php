@@ -87,3 +87,5 @@ function mitteDubleeri($rida){
     }
 }
 mitteDubleeri($vmassiiv);
+
+// Lahendused GitHubi commititud

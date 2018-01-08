@@ -15,3 +15,8 @@ echo '<pre>';
 print_r($student);
 echo '</pre>';
 
+echo '<hr />';
+
+foreach ($student as $key => $value){
+    echo $key.' - '.$value.'<br />';
+}

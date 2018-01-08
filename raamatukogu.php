@@ -14,3 +14,4 @@ $raamat = array(
     'status' => 'valjas'
 );
 salvestaRaamat($raamat, 'raamatud.txt');
+loeAndmed('raamatud.txt');

@@ -39,3 +39,29 @@ function salvestaRaamat($raamat, $failinimi){
         echo 'Probleem failiga '.$failinimi.'<br />';
     }
 }
+/*
+ * Koostame funktsiooni failist lugemiseks ja väljastamiseks
+ * */
+function loeAndmed($failinimi){
+    if(file_exists($failinimi) and is_file($failinimi) and is_readable($failinimi)){
+        $fail = fopen($failinimi, 'r');
+        echo '<table border="1">';
+        echo '<tr>';
+        echo '<th>Pealkiri</th>';
+        echo '<th>Autor</th>';
+        echo '<th>Trükikoda</th>';
+        echo '<th>Seisund</th>';
+        echo '</tr>';
+        echo '<tr>';
+        while(! feof($fail)){
+            $rida = fgets($fail);
+            if($rida != "----\n") {
+                echo '<td>' . $rida . '</td>';
+            } else {
+                echo '</tr>';
+            }
+        }
+        echo '</table>';
+        fclose($fail);
+    }
+}

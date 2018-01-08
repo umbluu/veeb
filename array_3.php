@@ -58,3 +58,23 @@ foreach ($students as $student){
 }
 
 echo '<hr />';
+
+foreach ($students as $student){
+    arsort($student);
+    foreach ($student as $key => $value){
+        echo $key.' - '.$value.'<br />';
+    }
+    echo '-------------------'.'<br />';
+}
+
+echo '<hr />';
+
+foreach ($students as $student){
+    asort($student);
+    foreach ($student as $key => $value){
+        echo $key.' - '.$value.'<br />';
+    }
+    echo '-------------------'.'<br />';
+}
+
+echo '<hr />';

@@ -70,3 +70,9 @@ function kauaOotan($paev, $kuu, $aasta){
 
     return $tulemus;
 }
+
+sisestaAndmed();
+echo '<pre>';
+//aastaKontroll($_POST['paev'], $_POST['kuu']);
+print_r(kauaOotan($_POST['paev'], $_POST['kuu'], aastaKontroll($_POST['paev'], $_POST['kuu'])));
+echo '</pre>';

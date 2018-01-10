@@ -22,3 +22,11 @@ echo $tana.'<br />';
  * võimalusel andmete salvestamiseks kasuta sobilik
  * andmetüüp - näiteks massiivid, sõned jne
  * */
+
+function sisestaAndmed(){
+    echo '<form action="'.$_SERVER['PHP_SELF'].'" method="post">';
+    echo 'Päev: <input type="text" name="paev"><br />';
+    echo 'Kuu: <input type="text" name="kuu"><br />';
+    echo '<input type="submit" value="Arvuta!">';
+    echo '</form>';
+}

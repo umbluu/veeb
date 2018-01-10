@@ -30,3 +30,43 @@ function sisestaAndmed(){
     echo '<input type="submit" value="Arvuta!">';
     echo '</form>';
 }
+
+function aastaKontroll($paev, $kuu){
+    $hetkeKuu = date('n');
+    $hetkePaev = date('d');
+    if($paev < $hetkePaev and $kuu == $hetkeKuu){
+        $aasta = date('Y')+1;
+    } else{
+        $aasta = date('Y');
+    }
+    return $aasta;
+}
+
+function kauaOotan($paev, $kuu, $aasta){
+    echo $paev.'<br />';
+    echo $kuu.'<br />';
+    echo $aasta.'<br />';
+
+    $aegHetkel = time();
+    $synniAeg = mktime(0, 0, 0, $kuu, $paev, $aasta);
+
+    $tulemus = array();
+
+    $vaheSekundites = $synniAeg - $aegHetkel;
+    $sekundid = $vaheSekundites % 60;
+    $tulemus['sekundid'] = $sekundid;
+    $vaheMinutites = $vaheSekundites / 60;
+    $minutid = $vaheMinutites % 60;
+    $tulemus['minutid'] = $minutid;
+    $vaheTundides = $vaheMinutites / 60;
+    $tunnid = $vaheTundides % 24;
+    $tulemus['tunnid'] = $tunnid;
+    $vahePaevades = $vaheTundides / 24;
+    $paevad = $vahePaevades % 30.4;
+    $tulemus['paevad'] = $paevad;
+    $kuud = $vahePaevades / 30.4;
+    settype($kuud, 'int');
+    $tulemus['kuud'] = $kuud;
+
+    return $tulemus;
+}

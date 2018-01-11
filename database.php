@@ -8,7 +8,7 @@
 
 error_reporting(E_ALL);
 
-$connection = mysqli_connect("localhost", "xxx", "xxx", "xxx");
+$connection = mysqli_connect("localhost", "xxx", "xxx", "xxxx");
 
 /**echo "<pre>";
 print_r($connection);

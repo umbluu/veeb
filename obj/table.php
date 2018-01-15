@@ -11,5 +11,17 @@ class table
     // Klassi muutujad
     var $tableContent = array();
     var $headings = array();
-    var $columnTotal;
+    var $columnCount;
+
+    // Klassi meetodid
+    /**
+     * table constructor.
+     * @param array $headings
+     */
+    public function __construct(array $headings)
+    {
+        $this->headings = $headings;
+        $this->columnCount = count($headings);
+    }
+
 }

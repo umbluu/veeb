@@ -16,3 +16,4 @@ $myTable->addRow(array(7, 8, 9));
 echo '<pre>';
 print_r($myTable);
 echo '</pre>';
+$myTable->printTable();

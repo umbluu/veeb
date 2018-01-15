@@ -33,6 +33,17 @@ class table
     }
 
     function printTable(){
-        
+        echo '<pre>';
+        foreach ($this->headings as $heading){
+            echo '<b>'.$heading.'</b>'.' ';
+        }
+        echo "\n";
+        foreach ($this->tableContent as $row){
+            foreach ($row as $rowElement){
+                echo $rowElement.' ';
+            }
+            echo "\n";
+        }
+        echo '</pre>';
     }
 }

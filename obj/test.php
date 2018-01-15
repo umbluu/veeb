@@ -11,7 +11,7 @@ require_once 'text.php';
 
 $myText = new text();
 // Anname sõne muutujale väärtuse
-$minuTekst->string = 'Hello world!';
+$myText->string = 'Hello world!';
 
 // Teostame test vaate antud objektist
 

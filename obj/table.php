@@ -24,4 +24,15 @@ class table
         $this->columnCount = count($headings);
     }
 
+    function addRow($row) {
+        if(count($row) != $this->columnCount){
+            return false;
+        }
+        array_push($this->tableContent, $row);
+        return true;
+    }
+
+    function printTable(){
+        
+    }
 }

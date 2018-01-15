@@ -9,9 +9,9 @@ require_once 'text.php';
 
 // Loome reaalse objekti tekst class abil
 
-$myText = new text();
+$myText = new text('Hello world!');
 // Anname sõne muutujale väärtuse
-$myText->string = 'Hello world!';
+$myText->assignText('Hello world!');
 
 // Teostame test vaate antud objektist
 

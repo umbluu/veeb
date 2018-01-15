@@ -18,3 +18,5 @@ $myText->assignText('Hello world!');
 echo '<pre>';
 print_r($myText);
 echo '</pre>';
+// Väljastame objekti sõne väärtuse
+$myText->printText();

@@ -9,10 +9,12 @@ require_once 'text.php';
 
 // Loome reaalse objekti tekst class abil
 
-$minuTekst = new text();
+$myText = new text();
+// Anname sõne muutujale väärtuse
+$minuTekst->string = 'Hello world!';
 
 // Teostame test vaate antud objektist
 
 echo '<pre>';
-print_r($minuTekst);
+print_r($myText);
 echo '</pre>';

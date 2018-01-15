@@ -31,4 +31,9 @@ class text
         function assignText($s){
             $this->string = $s;
         }
+
+        // teksti väljastamine
+        function printText(){
+            echo $this->string.'<hr />';
+        }
 }

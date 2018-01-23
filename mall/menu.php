@@ -14,3 +14,14 @@ $menuItemTmpl->set('menu_item_name', 'esimene');
 echo '<pre>';
 print_r($menuItemTmpl);
 echo '</pre>';
+// täidame loodud elemendiga lehe menüü
+$menuItem = $menuItemTmpl->parse();
+$menuTmpl->set('menu_items', $menuItem);
+echo '<pre>';
+print_r($menuTmpl);
+echo '</pre>';
+// koostame valmis menüü vaade
+$menu = $menuTmpl->parse();
+// ja lisame antud vaade peamalli elemendile
+// nimega {menu}
+$mainTmpl->set('menu', $menu);

@@ -15,12 +15,11 @@ $mainTmpl->set('page_title', 'Lehe pealkiri');
 $mainTmpl->set('user', 'Kasutaja');
 $mainTmpl->set('title', 'Pealkiri');
 $mainTmpl->set('lang_bar', 'Keeleriba');
-$mainTmpl->set('menu', 'Lehe menüü');
+// katsetame menüü loomist
+require_once 'menu.php';
 $mainTmpl->set('content', 'Lehe sisu');
 // lisame objekti testvaade
 echo '<pre>';
 print_r($mainTmpl);
 echo '</pre>';
 echo $mainTmpl->parse();
-// katsetame menüü loomist
-require_once 'menu.php';

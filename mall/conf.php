@@ -10,6 +10,9 @@
 define('MODEL_DIR', 'model/');
 define('VIEW_DIR', 'views/');
 define('CONTROL_DIR', 'controllers/');
+define('LIB_DIR', 'lib/');
+// nõuame abifunktisoonide faili kasutamist
+require_once LIB_DIR.'utils.php';
 // nõuame vajalike failide kasutamist
 require_once MODEL_DIR.'template.php';
 require_once MODEL_DIR.'http.php';

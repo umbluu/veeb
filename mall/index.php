@@ -20,4 +20,6 @@ require_once 'menu.php';
 $mainTmpl->set('content', 'Lehe sisu');
 echo $mainTmpl->parse();
 // kontrollime kontandite olemasolu
-echo HTTP_HOST.SCRIPT_NAME;
+$link =  '';
+$http->addToLink($link, 'control', 'login');
+$http->addToLink($link, 'username', 'test');

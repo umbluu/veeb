@@ -6,34 +6,27 @@
  * Time: 8:51
  */
 
-class text
+class tekst
 {
-        // klassi omadus(ed)
-        // klassi muutuja(d)
-        var $string = '';
-
-    /**
-     * text constructor.
-     * @param string $string
-     */
-    public function __construct($s)
-    {
-        $this->assignText($s);
-    }
+    // klassi omadus(ed)
+    // klassi muutuja(d)
+    var $sone = '';
     // klassi tegevused
-        // klassi meetodid
-        // klassi constructor
-
-
-
-
-        // teksti määramine
-        function assignText($s){
-            $this->string = $s;
-        }
-
-        // teksti väljastamine
-        function printText(){
-            echo $this->string.'<hr />';
-        }
+    // klassi meetodid
+    // klassi konstruktor
+    /**
+     * tekst constructor.
+     */
+    public function __construct($s = '')
+    {
+        $this->maaraTekst($s);
+    }
+    // teksti määramine
+    function maaraTekst($s){
+        $this->sone = $s;
+    }
+    // teksti väljastamine
+    function prindiTekst(){
+        echo $this->sone.'<br />';
+    }
 }

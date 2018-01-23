@@ -6,41 +6,49 @@
  * Time: 12:23
  */
 
-class table
+class tabel
 {
-    // Klassi muutujad
-    var $tableContent = array();
-    var $headings = array();
-    var $columnCount;
-
-    // Klassi meetodid
+    // klassi muutujad
+    var $tabeliSisu = array();
+    var $pealkirjad = array();
+    var $veergudeArv;
+    // klassi meetodid
     /**
-     * table constructor.
-     * @param array $headings
+     * tabel constructor.
+     * @param array $pealkirjad
      */
-    public function __construct(array $headings)
+    public function __construct(array $pealkirjad)
     {
-        $this->headings = $headings;
-        $this->columnCount = count($headings);
+        $this->pealkirjad = $pealkirjad;
+        $this->veergudeArv = count($pealkirjad);
     }
-
-    function addRow($row) {
-        if(count($row) != $this->columnCount){
+    function lisaRida($rida){
+        if(count($rida) != $this->veergudeArv){
             return false;
         }
-        array_push($this->tableContent, $row);
+        array_push($this->tabeliSisu, $rida);
         return true;
     }
-
-    function printTable(){
+    /*
+     * Koosta funktsioon nimega lisaReaKirjeldusega
+     * $tabel->lisaReaKirjeldusega(array('a'=>2, 'c'=>5, 'b'=>0));*/
+    function lisaReaKirjeldusega($ridaKirjeldusega){
+        $rida = array();
+        foreach ($this->pealkirjad as $pealkiri){
+            $rida[] = $ridaKirjeldusega[$pealkiri];
+        }
+        array_push($this->tabeliSisu, $rida);
+        return true;
+    }
+    function prindiTabel(){
         echo '<pre>';
-        foreach ($this->headings as $heading){
-            echo '<b>'.$heading.'</b>'.' ';
+        foreach ($this->pealkirjad as $pealkiri){
+            echo '<b>'.$pealkiri.'</b>'.' ';
         }
         echo "\n";
-        foreach ($this->tableContent as $row){
-            foreach ($row as $rowElement){
-                echo $rowElement.' ';
+        foreach ($this->tabeliSisu as $rida){
+            foreach ($rida as $reaElement){
+                echo $reaElement.' ';
             }
             echo "\n";
         }
